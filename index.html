@@ -1,29 +1,82 @@
 <html>
 <head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 </head>
 
 <body>
-  <div id="orderPlacement">
-    <h3>Place Orders Here</h3>
-    <input id="coffee" type="text" placeholder="Black Coffee">
-    <input id="emailAddress" type="text" placeholder="something@gmail.com">
-    <button id="submitOrder">Submit Order</button>
+
+  <div class="accordion" id="appAccordion">
+
+    <div class="card">
+      <div class="card-header" id="headingOrderPlacement">
+        <h3 class="mb-0">
+          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#orderPlacement" aria-expanded="true" aria-controls="orderPlacement">
+            Place Orders Here
+          </button>
+        </h3>
+      </div>
+      <div id="orderPlacement" class="collapse show" aria-labelledby="headingOrderPlacement" data-parent="#appAccordion">
+        <div class="card-body">
+          <input id="coffee" type="text" placeholder="Black Coffee">
+          <input id="emailAddress" type="text" placeholder="something@gmail.com">
+          <button id="submitOrder">Submit Order</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" id="headingOrderCancellation">
+        <h3 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#orderCancellation" aria-expanded="false" aria-controls="orderCancellation">
+            Cancel An Order
+          </button>
+        </h3>
+      </div>
+      <div id="orderCancellation" class="collapse" aria-labelledby="headingOrderCancellation" data-parent="#appAccordion">
+        <div class="card-body">
+          <input id="orderDeleteEmail" type="text" placeholder="something@gmail.com">
+          <button id="deleteEmailButton">Delete Order</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" id="headingIndividualOrder">
+        <h3 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#individualOrder" aria-expanded="false" aria-controls="individualOrder">
+            Search For An Order
+          </button>
+        </h3>
+      </div>
+      <div id="individualOrder" class="collapse" aria-labelledby="headingIndividualOrder" data-parent="#appAccordion">
+        <div class="card-body">
+          <input id="orderSearchEmail" type="text" placeholder="something@gmail.com">
+          <button id="orderSearchButton">Search for Order</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" id="headingOrderList">
+        <h3 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#orderList" aria-expanded="false" aria-controls="orderList">
+            List of Orders
+          </button>
+        </h3>
+      </div>
+      <div id="orderList" class="collapse" aria-labelledby="headingOrderList" data-parent="#appAccordion">
+        <div class="card-body">
+          <button id="searchAllButton">Print All Orders</button>
+        </div>
+      </div>
+    </div>
+
   </div>
-  <div id="orderCancellation">
-    <h3>Cancel An Order</h3>
-    <input id="orderDeleteEmail" type="text" placeholder="something@gmail.com">
-    <button id="deleteEmailButton">Delete Order</button>
-  </div>
-  <div id="individualOrder">
-    <h3>Search For An Order</h3>
-    <input id="orderSearchEmail" type="text" placeholder="something@gmail.com">
-    <button id="orderSearchButton">Search for Order</button>
-  </div>
-  <div id="orderList">
-    <h3>List of Orders</h3>
-    <button id="searchAllButton">Print All Orders</button>
-  </div>
+
 </body>
 
 <script src="site.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 </html>
