@@ -1,0 +1,35 @@
+
+body {
+  background-color: #FF9C5E;
+  font-family: 'Lato', sans-serif;
+}
+
+h1 {
+  color: #3A2122;
+  font-family: 'Goblin One', cursive;
+  font-size: 13.5vw;
+  text-align: center;
+}
+
+button {
+  background-color: #FF9C5E;
+  color: #3A2122;
+}
+
+.container {
+  background-color: #FF9C5E;
+}
+
+.card-header {
+  background-color: #098386;
+}
+
+.btn-info, .btn-info:hover, .btn-info::after, .btn-info:active {
+  color: white;
+  text-decoration: none;
+  border-color: #39CFD3;
+}
+
+.card-body {
+  background-color: #39CFD3;
+}

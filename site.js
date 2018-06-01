@@ -36,7 +36,7 @@ function placeOrder(selectedCoffee, selectedEmail) {
     return response.json()
   }).then(function(json) {
     console.log(json)
-    orderPlacement.innerHTML += "<br><br>Your order has been placed!"
+    orderPlacement.innerHTML += "Your order has been placed!"
   })
 }
 
@@ -45,7 +45,7 @@ function deleteOrder(orderByEmail) {
   fetch(`http://dc-coffeerun.herokuapp.com/api/coffeeorders/${orderByEmail}`,{
     method: 'DELETE'
   })
-  orderCancellation.innerHTML += "<br><br>Your order has been deleted."
+  orderCancellation.innerHTML += "Your order has been deleted."
 }
 
 function searchOrder(searchByEmail) {
